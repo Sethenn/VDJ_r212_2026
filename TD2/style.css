@@ -1,0 +1,67 @@
+body { /* format et comment est présenter la page avec la police décriture et sa taille */
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #000000;
+}
+
+header { /* la barre du haut qui sert de menu */
+  background-color: rgb(115, 199, 255);
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: large;
+}
+
+header nav ul { /* fait partie de la barre du haut qui sert de menu c'est la couleur et la distance des parties */
+  display: flex;   
+  justify-content:space-around;
+  color: #000000;
+}
+
+main { /* les différentes classes qui constitue la page */
+  max-width: 100ch;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.hero { /* la présentation du site */
+  margin-bottom: 5ch;
+  text-align: center;
+  font-size: 2.5ch;
+}
+
+.hero a { /* le lien découvrir souligner pour la taille */
+  font-size:2ch;
+}
+
+section { /* l'espace entre le header et le .hero */
+  margin-top: 2rem;
+}
+
+h1 { /* la couleur et le placement des titres des articles */
+  margin-top: 0;
+  text-align: center;
+  color: blue;
+}
+
+h2 { /* la couleur et le placement des titres des articles d'une autre couleru pour différencier */
+  margin-top: 0;
+  text-align: center;
+  color: rgb(68, 146, 182);
+}
+
+article { /* le centrage des aritcles avec un fond de couleur / j'ai pas reussi a faire ce que je voulais les mettre cote à cote de droite à gauche */
+  text-align: center; /* le centrage des articles*/
+  padding: 10px;
+  margin: 10px;
+  background: rgb(218, 248, 255); /* la couleur du fond des articles */
+}
+
+footer { /* la fin de la page */
+  background-color: rgb(115, 199, 255);
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.5ch;
+} 
