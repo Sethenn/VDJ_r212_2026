@@ -1,0 +1,147 @@
+:root {
+  --color-primary: #3b4cc0;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-bg: #f5f5f7;
+  --color-bg-alt: #7cbeff;
+  --spacing-md: 1rem;
+  --radius: 8px;
+}
+
+.dark {
+    --color-primary: #60a5fa;
+    --color-text: #e5e7eb;
+    --color-text-light: #9ca3af;
+    --color-bg: #111827;
+    --color-bg-alt: #1f2937;
+    --color-overlay: rgba(0, 0, 0, 0.7);
+}
+    
+/* Typographie d'abord */
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #1a1a2e;
+  background: var(--color-bg);
+}
+
+/* Layout ensuite */
+.projets-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  text-align: center;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.cta{
+    color:var(--color-text);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-size:2rem;
+    background-color:var(--color-primary);
+}
+
+.portefolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+section{
+  align-items: center;
+  text-align: center;
+}
+
+.carte{
+    background-color:var(--color-bg-alt);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    border-radius: 1.5rem;
+}
+
+.carte:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+a, button {
+  transition: color 0.2s, background-color 0.2s;
+}
+
+ .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-overlay);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal.is-visible {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--color-bg);
+      border-radius: 0.5rem;
+      padding: var(--space-lg);
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--color-text);
+      line-height: 1;
+    }
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--color-primary);
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: large;
+}
+
+@media (min-width: 600px) {
+  .layout {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
